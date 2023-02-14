@@ -1,6 +1,0 @@
-pip install django # instala django
-django-admin startproject project # cria projeto
-python manage.py startapp app # cria app
-python manage.py runserver # inicia servidor
-python manage.py makemigrations # cria models
-python manage.py migrate # injeta models no bd
