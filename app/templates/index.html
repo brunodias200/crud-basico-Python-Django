@@ -22,11 +22,11 @@
         <h1>CRUD com python</h1>
     </div>
 
-    {% if carro == 'Fiat Uno' %}
+    <!-- {% if carro == 'Fiat Uno' %}
         Esse é um carro {{carro}}
     {% else %}
         Não tem carro {{carro}}
-    {% endif %}
+    {% endif %} -->
 
     <div class="col-8 m-auto pt-2 pb-2 text-center">
         <a href="/form" class="btn btn-success">Adicionar</a>
@@ -52,8 +52,8 @@
                     <td>{{dbs.ano}}</td>
                     <td>
                         <a href="view/{{dbs.id}}" class="btn btn-dark">Visualizar</a>
-                        <a href="" class="btn btn-primary">Editar</a>
-                        <a href="" class="btn btn-danger">Excluir</a>
+                        <a href="edit/{{dbs.id}}" class="btn btn-primary">Editar</a>
+                        <a href="delete/{{dbs.id}}" onclick="return confirm('deseja mesmo apagar esse dado?')" class="btn btn-danger btnDel">Delete</a>
                     </td>
                 </tr>
                 {% endfor %}
@@ -61,7 +61,7 @@
         </table>
     </div>
 
-
+    {% load static %}
+    <script src="{% static 'javascript.js'%}"></script>
 </body>
-
 </html>

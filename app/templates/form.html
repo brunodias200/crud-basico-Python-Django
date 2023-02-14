@@ -29,7 +29,7 @@
     <div class="col-8 m-auto pt-2 pb-2 text-center">
         <!-- {{form}} -->
         <!-- {{form.as_p}} -->
-        <form name="form" action="/create/" id="form" method="post">
+        <form name="form" action="{% if db %}/update/{{db.id}}/{% else %}/create/{% endif %}" id="form" method="post">
             {% csrf_token %}
             <div class="form-group mt-4">
                 Modelo: {{form.modelo}}
