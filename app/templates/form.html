@@ -27,6 +27,8 @@
     </div>
 
     <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <div id="result"></div>
+
         <!-- {{form}} -->
         <!-- {{form.as_p}} -->
         <form name="form" action="{% if db %}/update/{{db.id}}/{% else %}/create/{% endif %}" id="form" method="post">
@@ -47,6 +49,7 @@
     </div>
 
 
+    {% load static %}
+    <script src="{% static 'javascriptForm.js'%}"></script>
 </body>
-
 </html>
