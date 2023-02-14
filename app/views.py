@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from app.forms import CarrosForm
 from app.models import Carros
 from app.models import Carros
-from django.core.paginator import Paginator
+# from django.core.paginator import Paginator # descomentar para utilizar paginação
 
 # Create your views here.
 def home(request):
